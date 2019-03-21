@@ -101,7 +101,7 @@ export default {
             return this.projectName(
                 this.convertUrlParam
             )
-        }
+        },
 
     },
     mounted() {
@@ -126,6 +126,12 @@ h1 {
 }
 .VueCarousel {
     max-width: 600px;
+    overflow: hidden;
+}
+@media screen and (max-width: 39.9375em) {
+    .VueCarousel {
+        overflow: hidden;
+    }
 }
 </style>
 
