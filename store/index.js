@@ -5,8 +5,8 @@ export const state = () => ({
             thumbnailPath: '/avoya_reviews_thumb.png',
             images: ['/avoya_reviews_home.png', '/avoya_reviews_details.png'],
             title: 'Avoya Travel Reviews',
-            description: '<p class="pb-4">This was a project I build in our legacy codebase using ColdFusion and JavaScript/Jquery. Our engineers compiled a table of customer reviews that were sent in through our membership system. My role was to design an interface in which a user could sort though the reviews based on any combination of Cruiseline and their corresponding ships.</p><p class="pb-4">I am currently rebuilding this application in our new repository using Nuxt.js. The new page will have the ability to sort/filter by star rating, date, and ship name.</p>',
-            techUsed: ['ColdFusion', 'jQuery', 'JavaScript', 'Ajax'],
+            description: '<p class="pb-4">This was a project I originally built in our legacy codebase using ColdFusion and JavaScript/Jquery. Our engineers compiled a table of customer reviews that were sent in through our membership system. My role was to design an interface in which a user could sort though the reviews based on any combination of Cruiseline and their corresponding ships.</p><p class="pb-4">A year later I had the opportunity to refactor these pages using Atomic Design and in the Nuxt framework. We also upgraded the page with the ability to sort/filter by star rating, date, and ship name.</p>',
+            techUsed: ['Vuejs', 'Nuxt', 'Axios', 'JavaScript', 'API'],
             siteLink: ''
         },
         AvoyaDashboard: {
@@ -15,7 +15,7 @@ export const state = () => ({
             images: ['/avoya_dashboard_top.png', '/avoya_dashboard_bot.png', '/avoya_dashboard_modal.png'],
             title: 'Avoya Membership',
             description: '<p class="pb-4">Agent Power, Ayoya\'s proprietary software, is a lead management and booking system that our network of Travel Agents use to manage their customers. The dashboard is our latest featured release. It is a snapshot of the most crucial data a travel agent needs to have at any given moment. Almost every component relies on dynamic data being returned to have the most up to date information. Agency owners also have the option to change the view to see their employee\'s performance and status.</p>',
-            techUsed: ['Vuejs', 'Nuxt', 'Axios', 'JavaScript', 'Ajax'],
+            techUsed: ['Vuejs', 'Nuxt', 'Axios', 'JavaScript', 'API'],
             siteLink: ''
         },
         AvoyaMembership: {
