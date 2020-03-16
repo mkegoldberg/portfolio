@@ -4,25 +4,25 @@ export const state = () => ({
             path: '/projects/avoya-reviews/',
             thumbnailPath: '/avoya_reviews_thumb.png',
             images: ['/avoya_reviews_home.png', '/avoya_reviews_details.png'],
-            title: 'Avoya Travel Reviews',
+            title: 'Travel Review Page',
             description: '<p class="pb-4">This was a project I originally built in our legacy codebase using ColdFusion and JavaScript/Jquery. Our engineers compiled a table of customer reviews that were sent in through our membership system. My role was to design an interface in which a user could sort though the reviews based on any combination of Cruiseline and their corresponding ships.</p><p class="pb-4">A year later I had the opportunity to refactor these pages using Atomic Design and in the Nuxt framework. We also upgraded the page with the ability to sort/filter by star rating, date, and ship name.</p>',
-            techUsed: ['Vuejs', 'Nuxt', 'Axios', 'JavaScript', 'API'],
+            techUsed: ['Vuejs', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss'],
             siteLink: ''
         },
         AvoyaDashboard: {
             path: '/projects/avoya-dashboard/',
             thumbnailPath: '/avoya_dashboard_thumb.png',
             images: ['/avoya_dashboard_top.png', '/avoya_dashboard_bot.png', '/avoya_dashboard_modal.png'],
-            title: 'Avoya Membership',
+            title: 'B2B Dashboard',
             description: '<p class="pb-4">Agent Power, Ayoya\'s proprietary software, is a lead management and booking system that our network of Travel Agents use to manage their customers. The dashboard is our latest featured release. It is a snapshot of the most crucial data a travel agent needs to have at any given moment. Almost every component relies on dynamic data being returned to have the most up to date information. Agency owners also have the option to change the view to see their employee\'s performance and status.</p>',
-            techUsed: ['Vuejs', 'Nuxt', 'Axios', 'JavaScript', 'API'],
+            techUsed: ['Vuejs', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss'],
             siteLink: ''
         },
         AvoyaMembership: {
             path: '/projects/avoya-membership/',
             thumbnailPath: '/avoya_membership_thumb.png',
             images: ['/avoya_membership_home.png', '/avoya_membership_favorites.png', '/avoya_membership_settings.png'],
-            title: 'Avoya Membership',
+            title: 'Membership Landing Page',
             description: '<p class="pb-4">As my introductory project to Vue.js, this project was a terrific experience of how great a framework it is. The membership platform is actually a hybrid that uses coldfusion to handle the api end points in the parent pages, then utilizes the "Props" to pass the data to the vue components</p><p class="pb-4">The membership platform is a system in which users can store their personal information, save their favorite trips, and write reviews<p>',
             techUsed: ['Vuejs', 'JavaScript', 'jQuery', 'Ajax'],
             siteLink: ''
@@ -76,7 +76,7 @@ export const state = () => ({
             path: '/projects/coming-soon/',
             thumbnailPath: '/coming_soon_thumb.jpg',
             images: ['/coming_soon_cover.png'],
-            title: 'Coming Soon',
+          title: 'Book Advertisement',
             description: '<p class="pb-4">A "teaser" poster for a highly anticipated book. This poster was posted throughout the author\'s various social media outlets.</p>',
             techUsed: ['Illustrator', 'PhotoShop'],
             siteLink: ''

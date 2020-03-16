@@ -10,17 +10,20 @@
             <div class="md:flex md:content-start md:flex-wrap">
                 <div
                     v-for="(item, title) in portfolioItems"
-                    :key="title" 
+                    :key="title"
                     class="md:w-1/3 p-4"
                 >
                     <div class="text-grey-darker text-center">
                         <nuxt-link :to="item.path">
-                            <img 
-                                :src="item.thumbnailPath" 
+                            <img
+                                :src="item.thumbnailPath"
                                 :alt="item.title"
-                                class="grow"
+                                class="grow mb-4"
                             >
                         </nuxt-link>
+                        <div>
+                            {{ item.title }}
+                        </div>
                     </div>
                 </div>
             </div>
