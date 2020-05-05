@@ -1,21 +1,48 @@
 export const state = () => ({
-    portfolioItems: {
+  portfolioItems: {
+        AvoyaValueChart: {
+            path: '/projects/avoya-value-chart/',
+            thumbnailPath: '/value_chart_thumb.png',
+            images: ['/value_chart_solo.png', '/value_chart_full.png'],
+            title: 'Value Comparison Chart',
+            description: '<p class="pb-4">I built this feature by calling a pricing endpoint that returns a heavily nested pricing struct. I wrote a helper function that loops through multiple layer of properties extracting prices for each cabin type, available promos, promo type, and finally tallies the values of each data point to run an across-the-board comparison. Despite it\'s look, I was able to achieve this without using a table. I created a parent component that houses column components which converts to a tab view on smaller screens.This also allows cabin types to be hidden when they are not available. This project started out as a simple wireframe that I had sketched out, but iterated into a pretty complex UI. With the interest of multiple stakeholders, the design had to pivot a few times (even in the middle of development), but the end result has proven to be a key component to drive leads into our network.</p>',
+            techUsed: ['Vue.js', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss', 'REST'],
+            siteLink: ''
+        },
+        MessagePlatform: {
+            path: '/projects/message-platform/',
+            thumbnailPath: '/message_platform_thumb.png',
+            images: ['/message_list.png', '/message_detail.png'],
+            title: 'Internal Messaging Platform',
+            description: '<p class="pb-4">Using a RESTful api that our backend team built, I was able to design and develop a messaging system for our network of travel agents and admins to securely communicate internally through our B2B software. I took this project from concept to creation. Thanks to the ability to write multi-layered actions in the Vuex Store, users have the ability to scan through a preview list of their messages, mark as read or unread, mark a task as complete, or drill into a single message view to get the full details. Users are able to toggle between mailboxes using Nuxt\'s dynamic routing and async fetch calls.</p>',
+            techUsed: ['Vue.js', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss', 'REST', 'Routing'],
+            siteLink: ''
+        },
+        // LeadWidget: {
+        //     path: '/projects/lead-widget/',
+        //     thumbnailPath: '/lead_widget_thumb.png',
+        //     images: ['/avoya_reviews_home.png', '/avoya_reviews_details.png'],
+        //     title: 'Lead Claiming Tool',
+        //     description: '<p class="pb-4">As part of our initiative to simplify the lead claiming process for our network of travel agents, we created a widget that will notify our agents </p>',
+        //     techUsed: ['Vue.js', 'Vuex', 'Axios', 'JavaScript', 'API', 'Tailwindcss', 'REST'],
+        //     siteLink: ''
+        // },
         AvoyaReviews: {
             path: '/projects/avoya-reviews/',
             thumbnailPath: '/avoya_reviews_thumb.png',
             images: ['/avoya_reviews_home.png', '/avoya_reviews_details.png'],
             title: 'Travel Review Page',
-            description: '<p class="pb-4">This was a project I originally built in our legacy codebase using ColdFusion and JavaScript/Jquery. Our engineers compiled a table of customer reviews that were sent in through our membership system. My role was to design an interface in which a user could sort though the reviews based on any combination of Cruiseline and their corresponding ships.</p><p class="pb-4">A year later I had the opportunity to refactor these pages using Atomic Design and in the Nuxt framework. We also upgraded the page with the ability to sort/filter by star rating, date, and ship name.</p>',
-            techUsed: ['Vuejs', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss'],
+            description: '<p class="pb-4">This was a project I originally built in our legacy codebase using ColdFusion and JavaScript/Jquery. Our engineers compiled a table of customer reviews that were sent in through our membership system. My role was to design an interface in which a user could sort though the reviews based on any combination of cruiselines and their corresponding ships.</p><p class="pb-4">A year later I had the opportunity to refactor these pages using Atomic Design and in the Nuxt framework. We also upgraded the page with the ability to sort/filter by star rating, date, and ship name.</p>',
+            techUsed: ['Vue.js', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss'],
             siteLink: ''
         },
         AvoyaDashboard: {
             path: '/projects/avoya-dashboard/',
             thumbnailPath: '/avoya_dashboard_thumb.png',
-            images: ['/avoya_dashboard_top.png', '/avoya_dashboard_bot.png', '/avoya_dashboard_modal.png'],
+          images: ['/avoya_dashboard_top.png', '/avoya_dashboard_metric.png', '/avoya_dashboard_bot.png', '/avoya_dashboard_modal.png'],
             title: 'B2B Dashboard',
-            description: '<p class="pb-4">Agent Power, Ayoya\'s proprietary software, is a lead management and booking system that our network of Travel Agents use to manage their customers. The dashboard is our latest featured release. It is a snapshot of the most crucial data a travel agent needs to have at any given moment. Almost every component relies on dynamic data being returned to have the most up to date information. Agency owners also have the option to change the view to see their employee\'s performance and status.</p>',
-            techUsed: ['Vuejs', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss'],
+            description: '<p class="pb-4">Agent Power&trade;, Ayoya\'s proprietary B2B software, is a lead management and booking software for our network of Travel Agents to manage their customers. The dashboard is a overview of their current activities, sales reports, and performance metrics. It is a snapshot of the most crucial data a travel agent needs to have at any given moment. Almost every component relies on dynamic data securely being returned to have the most up to date information. Agency owners also have the option to change the view to see their employee\'s performance and status.</p>',
+            techUsed: ['Vue.js', 'Nuxt', 'Chart.js', 'Axios', 'JavaScript', 'API', 'Tailwindcss', 'REST'],
             siteLink: ''
         },
         AvoyaMembership: {
@@ -24,7 +51,7 @@ export const state = () => ({
             images: ['/avoya_membership_home.png', '/avoya_membership_favorites.png', '/avoya_membership_settings.png'],
             title: 'Membership Landing Page',
             description: '<p class="pb-4">As my introductory project to Vue.js, this project was a terrific experience of how great a framework it is. The membership platform is actually a hybrid that uses coldfusion to handle the api end points in the parent pages, then utilizes the "Props" to pass the data to the vue components</p><p class="pb-4">The membership platform is a system in which users can store their personal information, save their favorite trips, and write reviews<p>',
-            techUsed: ['Vuejs', 'JavaScript', 'jQuery', 'Ajax'],
+            techUsed: ['Vue.js', 'JavaScript', 'jQuery', 'Ajax'],
             siteLink: ''
         },
         SilverDragon: {
