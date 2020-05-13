@@ -14,7 +14,7 @@ export const state = () => ({
           thumbnailPath: '/avoya_dashboard_thumb.png',
           images: ['/avoya_dashboard_top.png', '/avoya_dashboard_metric.png', '/avoya_dashboard_bot.png', '/avoya_dashboard_modal.png'],
           title: 'B2B Dashboard',
-          description: '<p class="pb-4">Agent Power&trade;, Ayoya\'s proprietary B2B software, is a lead management and booking software for our network of Travel Agents to manage their customers. The dashboard is a overview of their current activities, sales reports, and performance metrics. It is a snapshot of the most crucial data a travel agent needs to have at any given moment. Almost every component relies on dynamic data securely being returned to have the most up to date information. Agency owners also have the option to change the view to see their employee\'s performance and status.</p>',
+          description: '<p class="pb-4">Agent Power&trade;, Avoya\'s proprietary B2B software, is a lead management and booking software for our network of Travel Agents to manage their customers. The dashboard is a overview of their current activities, sales reports, and performance metrics. It is a snapshot of the most crucial data a travel agent needs to have at any given moment. Almost every component relies on dynamic data securely being returned to have the most up to date information. Agency owners also have the option to change the view to see their employee\'s performance and status.</p>',
           techUsed: ['Vue.js', 'Nuxt', 'Chart.js', 'Axios', 'JavaScript', 'API', 'Tailwindcss', 'REST'],
           siteLink: ''
         },
@@ -41,7 +41,7 @@ export const state = () => ({
             thumbnailPath: '/avoya_membership_thumb.png',
             images: ['/avoya_membership_home.png', '/avoya_membership_favorites.png', '/avoya_membership_settings.png'],
             title: 'Membership Landing Page',
-            description: '<p class="pb-4">As my introductory project to Vue.js, this project was a terrific experience of how great a framework it is. The membership platform is actually a hybrid that uses coldfusion to handle the api end points in the parent pages, then utilizes the "Props" to pass the data to the vue components</p><p class="pb-4">The membership platform is a system in which users can store their personal information, save their favorite trips, and write reviews<p>',
+            description: '<p class="pb-4">As my introductory project to Vue.js, this project was a terrific experience of how great a framework it is. The membership platform is actually a hybrid that uses ColdFusion to handle the api end points in the parent pages, then utilizes the "Props" to pass the data to the vue components</p><p class="pb-4">The membership platform is a system in which users can store their personal information, save their favorite trips, and write reviews<p>',
             techUsed: ['Vue.js', 'JavaScript', 'jQuery', 'Ajax'],
             siteLink: ''
         },
