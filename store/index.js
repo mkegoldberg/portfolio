@@ -1,4 +1,5 @@
 export const state = () => ({
+  selectedProject: {},
   portfolioItems: {
         AvoyaValueChart: {
             path: '/projects/avoya-value-chart/',
@@ -137,6 +138,12 @@ export const state = () => ({
         }
     }
 });
+
+export const mutations = {
+  setSelectedProject(state, projectName) {
+    state.selectedProject = state.portfolioItems[projectName];
+  }
+};
 
 export const getters = {
     projectName(state) {

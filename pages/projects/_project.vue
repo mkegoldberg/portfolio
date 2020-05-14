@@ -3,14 +3,14 @@
         <div class="flex flex-col md:flex-row container pt-4 md:py-4 px-2 md:px-4">
             <div class="hidden md:flex w-1/5 items-center">
                 <img
-                    :src="project.thumbnailPath"
+                    :src="selectedProject.thumbnailPath"
                     class="rounded-full mx-auto img-thumb"
                 >
             </div>
             <div class="flex w-full md:w-4/5 md:pl-8 justify-around">
                 <div class="self-center flex-1">
                     <h1 class="text-2xl md:text-3xl lg:text-5xl tracking-wide fade-left">
-                        {{ project.title }}
+                        {{ selectedProject.title }}
                     </h1>
                 </div>
             </div>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="py-4 md:py-8 max-w-md mx-auto px-2 md:px-4">
-            <client-only>
+            <no-ssr>
                 <Carousel
                     v-if="showCarousel"
                     :auto-play="true"
@@ -42,7 +42,7 @@
                     :loop="true"
                 >
                     <Slide
-                        v-for="(img, index) in project.images"
+                        v-for="(img, index) in selectedProject.images"
                         :key="index"
                     >
                         <img
@@ -51,12 +51,12 @@
                         >
                     </Slide>
                 </Carousel>
-            </client-only>
+            </no-ssr>
         </div>
 
         <div class="flex content-start flex-wrap container py-4 px-2 md:px-4">
             <span
-                v-for="tech in project.techUsed"
+                v-for="tech in selectedProject.techUsed"
                 :key="tech"
                 class="bg-blue-lighter text-white text-center text-sm rounded-full p-2 w-24 mr-2 mb-2 md:mb-0"
             >
@@ -67,14 +67,14 @@
         <div class="py-4 md:py-8 px-4 container description">
             <div
                 class="leading-normal"
-                v-html="project.description"
+                v-html="selectedProject.description"
             />
         </div>
     </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapState } from "vuex";
 export default {
     name: 'ProjectItem',
     components: {
@@ -88,19 +88,15 @@ export default {
         }
     },
     computed:{
-        ...mapGetters({ projectName: "projectName" }),
-        convertUrlParam(){
-            return this.$route.params.project.toLowerCase()
+        ...mapState(["selectedProject"]),
+
+    },
+    asyncData({store, params,}) {
+        let formatted = params.project.toLowerCase()
                 .split('-')
                 .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
                 .join('');
-        },
-        project() {
-            return this.projectName(
-                this.convertUrlParam
-            )
-        },
-
+        store.commit("setSelectedProject", formatted);
     },
     mounted() {
         this.showCarousel = true
