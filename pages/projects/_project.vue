@@ -17,7 +17,7 @@
         </div>
         <div class="container px-2 md:px-4">
             <div class="border-b border-grey-darker mb-2 title-container" />
-            <nuxt-link 
+            <nuxt-link
                 to="/#gallery"
                 class="no-underline text-blue hover:text-blue-light"
             >
@@ -32,7 +32,7 @@
         </div>
 
         <div class="py-4 md:py-8 max-w-md mx-auto px-2 md:px-4">
-            <no-ssr>
+            <client-only>
                 <Carousel
                     v-if="showCarousel"
                     :auto-play="true"
@@ -45,17 +45,17 @@
                         v-for="(img, index) in project.images"
                         :key="index"
                     >
-                        <img 
+                        <img
                             :src="img"
                             class=""
                         >
                     </Slide>
                 </Carousel>
-            </no-ssr>
+            </client-only>
         </div>
 
         <div class="flex content-start flex-wrap container py-4 px-2 md:px-4">
-            <span 
+            <span
                 v-for="tech in project.techUsed"
                 :key="tech"
                 class="bg-blue-lighter text-white text-center text-sm rounded-full p-2 w-24 mr-2 mb-2 md:mb-0"
@@ -66,7 +66,7 @@
 
         <div class="py-4 md:py-8 px-4 container description">
             <div
-                class="leading-normal"  
+                class="leading-normal"
                 v-html="project.description"
             />
         </div>
@@ -74,8 +74,6 @@
 </template>
 
 <script>
-/* eslint-disable */
-import Vue from "vue";
 import { mapGetters } from "vuex";
 export default {
     name: 'ProjectItem',
