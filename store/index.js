@@ -139,6 +139,13 @@ export const state = () => ({
     }
 });
 
+// create an action, pass in param name, call mutation
+export const actions = {
+  fetchSelectedProject({ commit }, name) {
+    commit("setSelectedProject", name);
+  }
+};
+
 export const mutations = {
   setSelectedProject(state, projectName) {
     state.selectedProject = state.portfolioItems[projectName];

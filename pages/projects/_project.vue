@@ -91,12 +91,12 @@ export default {
         ...mapState(["selectedProject"]),
 
     },
-    asyncData({store, params,}) {
+    fetch({store, params,}) {
         let formatted = params.project.toLowerCase()
                 .split('-')
                 .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
                 .join('');
-        store.commit("setSelectedProject", formatted);
+        store.dispatch("fetchSelectedProject", formatted);
     },
     mounted() {
         this.showCarousel = true
