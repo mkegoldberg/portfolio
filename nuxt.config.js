@@ -29,7 +29,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '~/plugins/font-awesome' }, { src: '~plugins/vue-carousel', ssr: false }], 
+  plugins: [{ src: '~/plugins/font-awesome' }, { src: '~plugins/vue-carousel', ssr: false }],
 
   /*
   ** Nuxt.js modules
@@ -44,6 +44,25 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+  },
+
+  generate: {
+    routes: [
+      '/projects/avoya-value-chart',
+      '/projects/avoya-dashboard',
+      '/projects/avoya-reviews',
+      '/projects/avoya-membership',
+      '/projects/message-platform',
+      '/projects/silver-dragon',
+      '/projects/staff-my-clients',
+      '/projects/techsd',
+      '/projects/nixon',
+      '/projects/ecommerce-page',
+      '/projects/coming-soon',
+      '/projects/sierra-botanicals',
+      '/projects/cathedral-catholic',
+      '/projects/logos'
+    ]
   },
 
   /*
