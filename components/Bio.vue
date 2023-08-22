@@ -54,7 +54,7 @@
                 </no-ssr>
             </div>
             <p class="text-xl leading-normal text-justify">
-                Over the last fifteen years I have held various positions ranging from sales/account management to project management. My knack for organization and follow through has allowed me to excel in my previous positions, but in the last 5 years, I have steered in a different direction and honed my technical skills in visual design and web development. My passion truly lies in front end development and I find gratification in producing a polished and functional web application. For the past three years I have been focusing on creating Vue.js applications using the Nuxt.js framework for a travel company that aggregates leads for travel agents. I take every project as an opportunity to refresh my methods and hone my practice in JavaScript.
+                With a diverse professional journey of roles ranging from sales and account management to project management, my knack for organization and follow-through has allowed me to excel at my previous positions. Since 2012, I have steered in a different direction and honed my technical skills in visual design and web development. My passion truly lies in frontend development and I find gratification in producing a polished and functional web application. My dynamic career trajectory has equipped me with adaptive problem-solving skills, effective communication, an appreciation for client needs, and with an unwavering passion for web development, I am driven to continually enhance my skills and knowledge, embracing each project as an opportunity to become a better programmer.
             </p>
         </div>
     </section>

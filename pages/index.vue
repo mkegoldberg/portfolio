@@ -2,7 +2,7 @@
     <div class="text-grey-darkest font-sans">
         <Hero />
         <div class="pt-48 pb-32 px-2 md:px-4 xl:px-8 text-center text-4xl tag-line">
-            Front End Developer. Driven by passion.<br class="lg:hidden"> Fueled by coffee.
+            Frontend Developer:<br class="md:hidden"> Driven by passion...<br class="lg:hidden"> Fueled by coffee.
         </div>
         <!-- <no-ssr> -->
         <Bio />
