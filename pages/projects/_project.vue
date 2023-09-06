@@ -17,7 +17,7 @@
                     <div class="gallery-link">
                         <nuxt-link
                             v-if="nav.prev"
-                            to="/?goTo=gallary"
+                            to="/?goTo=gallery"
                             class="no-underline text-blue hover:text-blue-light text-sm"
                         >
                             View all projects
@@ -44,7 +44,7 @@
                 </nuxt-link>
                 <nuxt-link
                     v-else
-                    to="/?goTo=gallary"
+                    to="/?goTo=gallery"
                     class="no-underline text-blue hover:text-blue-light"
                 >
                     <no-ssr>
@@ -161,6 +161,12 @@ export default {
 
     mounted() {
         this.showCarousel = true
+    },
+
+    head () {
+      return {
+        title: this.selectedProject.title
+      }
     }
 }
 </script>
