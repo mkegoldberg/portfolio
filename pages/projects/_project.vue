@@ -1,34 +1,75 @@
 <template>
     <div>
         <div class="flex flex-col md:flex-row container pt-4 md:py-4 px-2 md:px-4">
-            <div class="hidden md:flex w-1/5 items-center">
+            <div class="hidden md:block pr-8">
                 <img
                     :src="selectedProject.thumbnailPath"
-                    class="rounded-full mx-auto img-thumb"
+                    height="75"
+                    width="75"
+                    class="rounded-full img-thumb"
                 >
             </div>
-            <div class="flex w-full md:w-4/5 md:pl-8 justify-around">
+            <div class="flex flex-1 justify-around">
                 <div class="self-center flex-1">
-                    <h1 class="text-2xl md:text-3xl lg:text-5xl tracking-wide fade-left">
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl tracking-wide">
                         {{ selectedProject.title }}
                     </h1>
+                    <div class="gallery-link">
+                        <nuxt-link
+                            v-if="nav.prev"
+                            to="/?goTo=gallary"
+                            class="no-underline text-blue hover:text-blue-light text-sm"
+                        >
+                            View all projects
+                        </nuxt-link>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container px-2 md:px-4">
-            <div class="border-b border-grey-darker mb-2 title-container" />
-            <nuxt-link
-                to="/#gallery"
-                class="no-underline text-blue hover:text-blue-light"
-            >
-                <no-ssr>
-                    <font-awesome-icon
-                        :icon="['fas', 'long-arrow-alt-left']"
-                        class="mr-2"
-                    />
-                </no-ssr>
-                Back to Recent Projects
-            </nuxt-link>
+            <div class="border-b border-grey-darker mt-2 md:mt-0 mb-2 title-container" />
+            <div class="flex justify-between flex-wrap">
+                <nuxt-link
+                    v-if="nav.prev"
+                    :to="nav.prev.link"
+                    class="no-underline text-blue hover:text-blue-light"
+                >
+                    <no-ssr>
+                        <font-awesome-icon
+                            :icon="['fas', 'long-arrow-alt-left']"
+                            class="mr-2"
+                        />
+                    </no-ssr>
+                    {{ nav.prev.label }}
+                </nuxt-link>
+                <nuxt-link
+                    v-else
+                    to="/?goTo=gallary"
+                    class="no-underline text-blue hover:text-blue-light"
+                >
+                    <no-ssr>
+                        <font-awesome-icon
+                            :icon="['fas', 'long-arrow-alt-left']"
+                            class="mr-2"
+                        />
+                    </no-ssr>
+                    Back to Recent Projects
+                </nuxt-link>
+
+                <nuxt-link
+                    v-if="nav.next"
+                    :to="nav.next.link"
+                    class="no-underline text-blue hover:text-blue-light"
+                >
+                    {{ nav.next.label }}
+                    <no-ssr>
+                        <font-awesome-icon
+                            :icon="['fas', 'long-arrow-alt-right']"
+                            class="ml-2"
+                        />
+                    </no-ssr>
+                </nuxt-link>
+            </div>
         </div>
 
         <div class="py-4 md:py-8 max-w-md mx-auto px-2 md:px-4">
@@ -64,7 +105,7 @@
             </span>
         </div>
 
-        <div class="py-4 md:py-8 px-4 container description">
+        <div class="pb-4 md:pb-8 px-4 container description">
             <div
                 class="leading-normal"
                 v-html="selectedProject.description"
@@ -76,21 +117,40 @@
 <script>
 import { mapState } from "vuex";
 export default {
-    name: 'ProjectItem',
+    name: 'ProjectPage',
+
     components: {
         FontAwesomeIcon: () => import('@fortawesome/vue-fontawesome').then(module => module.FontAwesomeIcon),
         Carousel: () => import('vue-carousel').then(module => module.Carousel),
         Slide: () => import('vue-carousel').then(module => module.Slide),
     },
+
     data() {
         return {
             showCarousel: false
         }
     },
-    computed:{
-        ...mapState(["selectedProject"]),
 
+    computed:{
+        ...mapState(["selectedProject", "portfolioItems"]),
+        nav () {
+          const items = Object.values(this.portfolioItems)
+          const currentIndex = items.findIndex((item) => item.path === this.selectedProject.path)
+
+          const prev = currentIndex === 0
+            ? null
+            : { label: items[currentIndex - 1].title, link: items[currentIndex - 1].path}
+
+          const next = currentIndex === items.length - 1
+            ? null
+            : { label: items[currentIndex + 1].title, link: items[currentIndex + 1].path}
+          return {
+            prev: prev,
+            next: next
+          }
+        }
     },
+
     fetch({store, params,}) {
         let formatted = params.project.toLowerCase()
                 .split('-')
@@ -98,18 +158,19 @@ export default {
                 .join('');
         store.dispatch("fetchSelectedProject", formatted);
     },
+
     mounted() {
         this.showCarousel = true
     }
 }
 </script>
 <style scoped>
-h1 {
+h1,
+.gallery-link {
   opacity: 0;
   animation: fade-in-right ease-out .5s forwards;
 }
 .img-thumb {
-    max-width: 8rem;
     opacity: 0;
     animation: fade-in-bottom ease-out .5s forwards;
 }

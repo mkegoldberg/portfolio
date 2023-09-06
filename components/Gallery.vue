@@ -1,8 +1,5 @@
 <template>
-    <section
-        id="gallery"
-        class="py-24"
-    >
+    <section class="py-24">
         <div class="container">
             <h3 class="pb-6 font-normal text-center text-4xl tracking-wide">
                 My Projects

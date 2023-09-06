@@ -6,7 +6,7 @@ export const state = () => ({
             thumbnailPath: '/value_chart_thumb.png',
             images: ['/value_chart_solo.png', '/value_chart_full.png'],
             title: 'Value Comparison Chart',
-            description: '<p class="pb-4">I built this feature by calling a pricing endpoint that returns a heavily nested pricing struct. I wrote a helper function that loops through multiple layer of properties extracting prices for each cabin type, available promos, promo type, and finally tallies the values of each data point to run an across-the-board comparison. Despite it\'s look, I was able to achieve this without using a table. I created a parent component that houses column components which converts to a tab view on smaller screens.This also allows cabin types to be hidden when they are not available. This project started out as a simple wireframe that I had sketched out, but iterated into a pretty complex UI. With the interest of multiple stakeholders, the design had to pivot a few times (even in the middle of development), but the end result has proven to be a key component to drive leads into our network.</p>',
+            description: '<p class="pb-4">I built this feature using an endpoint that returns a heavily nested pricing struct. I wrote a helper function that loops through multiple layers of properties while extracting prices for each cabin type, available promos, promo type, while ultimately tallying the values of each data point to run an across-the-board comparison.</p><p>Despite it\'s look, I was able to achieve this without using a table. I created a parent component that houses column components which converts to a tab view on smaller screens. This also allows cabin types to be hidden when they are not available. This project started out as a simple wireframe that I created in Adobe Illustrator, but iterated into a complex UI. With the interest of multiple stakeholders, the design pivoted a few times (even in the middle of development), but the end result has proven to be a key component to drive sales.</p>',
             techUsed: ['Vue.js', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss', 'REST'],
             siteLink: ''
         },
@@ -15,7 +15,7 @@ export const state = () => ({
           thumbnailPath: '/avoya_dashboard_thumb.png',
           images: ['/avoya_dashboard_top.png', '/avoya_dashboard_metric.png', '/avoya_dashboard_bot.png', '/avoya_dashboard_modal.png'],
           title: 'B2B Dashboard',
-          description: '<p class="pb-4">Agent Power&trade;, Avoya\'s proprietary B2B software, is a lead management and booking software for our network of Travel Agents to manage their customers. The dashboard is a overview of their current activities, sales reports, and performance metrics. It is a snapshot of the most crucial data a travel agent needs to have at any given moment. Almost every component relies on dynamic data securely being returned to have the most up to date information. Agency owners also have the option to change the view to see their employee\'s performance and status.</p>',
+          description: '<p class="pb-4">Agent Power&trade;, Avoya\'s proprietary B2B software, is a lead management and booking software for our network of Travel Agents to manage their customers. The dashboard is a overview of their current activities, sales reports, and performance metrics. It is a snapshot of the most crucial data a travel agent needs to have at any given moment. Almost every component relies on dynamic data being securely returned for the most up to date information. Agency owners also have the option to change the view in order to see their employee\'s performance and status.</p>',
           techUsed: ['Vue.js', 'Nuxt', 'Chart.js', 'Axios', 'JavaScript', 'API', 'Tailwindcss', 'REST'],
           siteLink: ''
         },
@@ -33,7 +33,7 @@ export const state = () => ({
             thumbnailPath: '/avoya_reviews_thumb.png',
             images: ['/avoya_reviews_home.png', '/avoya_reviews_details.png'],
             title: 'Travel Review Page',
-            description: '<p class="pb-4">This was a project I originally built in our legacy codebase using ColdFusion and JavaScript/Jquery. Our engineers compiled a table of customer reviews that were sent in through our membership system. My role was to design an interface in which a user could sort though the reviews based on any combination of cruiselines and their corresponding ships.</p><p class="pb-4">A year later I had the opportunity to refactor these pages using Atomic Design and in the Nuxt framework. We also upgraded the page with the ability to sort/filter by star rating, date, and ship name.</p>',
+            description: '<p class="pb-4">This was a project I originally built in our legacy codebase using ColdFusion and JavaScript/Jquery. Our engineers compiled a table of customer reviews sent in through our membership system. My role was to design an interface where a user could sort though the reviews based on any combination of cruiselines and their corresponding ships.</p><p class="pb-4">A year later I had the opportunity to refactor these pages using Atomic Design in the Nuxt framework. We also upgraded the page with the ability to sort/filter by star rating, date, and ship name.</p>',
             techUsed: ['Vue.js', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss'],
             siteLink: ''
         },
@@ -60,7 +60,7 @@ export const state = () => ({
             thumbnailPath: '/silverDragon_thumb.jpg',
             images: ['/silverDragon_home.png', '/silverDragon_projects.png', '/silverDragon_profile.png',],
             title: 'SilverDragonSquadron.com',
-            description: '<p class="pb-4">I am currently working with Steve Kim, a retired architect and pilot, to chronicle the construction of his own person aircraft as he builds it by hand. Steve needed a website that would capture his passion for aviation, but easily be updated as he completes each section of the plane. He also needed an outlet to send out announcements as the plane goes through inspection and eventually takes flight.</p><p class="pb-4">My role as Steve’s WordPress administrator is to deliver a site that brings his vision to life. I oversaw securing the domain name, hosting, and installation of WordPress and this theme. I used custom css to build what Steve had envisioned.</p><p>I created all vector images from scratch in using Adobe Illustrator including the dragon emblem and Falcon XP logo</p>',
+            description: '<p class="pb-4">I am currently working with Steve Kim, a retired architect and pilot, to chronicle the construction of his own person aircraft as he builds it by hand. Steve needed a website that would capture his passion for aviation and update easily as he completes each section of the plane. He also needed an outlet to send out announcements as the plane goes through inspection and eventually takes flight.</p><p class="pb-4">My role as Steve’s WordPress administrator is to deliver a site that brings his vision to life. I oversaw securing the domain name, hosting, and installation of WordPress and this theme. I used custom css to build what Steve had envisioned.</p><p>I created all vector images from scratch, including the dragon emblem and Falcon XP logo, using Adobe Illustrator and Photoshop</p>',
             techUsed: ['WordPress', 'MailChimp', 'CSS', 'Photoshop', 'Illustrator'],
             siteLink: ''
         },
@@ -69,7 +69,7 @@ export const state = () => ({
             thumbnailPath: '/staff_my_clients_thumb.png',
             images: ['/staff-dashboard.png', '/staff-users.png', '/staff-department.png', '/staff-break.png', '/staff-overtime.png','/staff-overview.png', '/staff-rules.png'],
             title: 'Time Clock Software',
-            description: '<p class="pb-4">One of my first large scale projects was developing the user interface for software that keeps track of time-clock data. The designs were mocked up by the design team and I was part of a team that brought the mock-ups to life. During this project I became familiar with the git flow process and how to properly work in an environment with multiple branches in which other developers routinely pushed code.</p>',
+            description: '<p class="pb-4">One of my first large scale projects was developing the user interface for a platform that keeps track of time-clock data. I was part of a team that brought the mock-ups to life. During this project I became familiar with the git flow process and how to properly work in an environment with multiple branches in which other developers routinely pushed code.</p>',
             techUsed: ['NPM', 'SASS', 'Gulp', 'BootStrap', 'jQuery', 'HTML', 'CSS'],
             siteLink: ''
         },
@@ -78,7 +78,7 @@ export const state = () => ({
             thumbnailPath: '/techSD_thumb.jpg',
             images: ['/techSD_home.png', '/techSD_about.png', '/techSD_benefits.png',],
             title: 'techsandiego.org',
-            description: '<p class="pb-4">I was hired as a web administrator for Tech San Diego because the growing company needed someone to take remedial site updates off their hands. I had been maintaining their site using the Joomla! until management tasked me with migrating the site to WordPress, as well as giving it a fresh new look. It was a great learning experience and gave me exposure to UX/UI.</p>',
+            description: '<p class="pb-4">I was hired as a web administrator for Tech San Diego as the growing company needed someone to take remedial site updates off their hands. I had been maintaining their site using the Joomla! until management tasked me with migrating the site to WordPress, as well as giving it a fresh new look. It was a great learning experience and gave me exposure to UX/UI.</p>',
             techUsed: ['WordPress', 'Joomla!', 'CSS', 'Photoshop', 'Illustrator'],
             siteLink: ''
         },

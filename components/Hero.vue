@@ -32,7 +32,7 @@
     background: inherit;
     content: '';
     display: block;
-    height: 50%;
+    height: 400px;
     left: 0;
     position: absolute;
     right: 0;
@@ -56,18 +56,19 @@
     max-height: 500px;
 }
 
+
 /* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .hero-img {
         max-width: 350px;
         max-height: 350px;
     }
     .hero:after {
-        height: 28%;
+        height: 300px;
     }
 }
 /* Small only */
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 767px) {
     .hero-img {
         max-width: 350px;
         max-height: 350px;
