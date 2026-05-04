@@ -13,16 +13,42 @@ export const state = () => ({
         '/ez_screening.png',
         '/ez_pricing.png'
       ],
-      title: 'ezLandlordForms',
+      title: 'ezLandlordForms.com',
       description:
-        '<p class="pb-4">For over 5 years I have served as the lead Frontend Developer for ezLandlordForms, a comprehensive property management platform designed to simplify the rental process for landlords and property managers. I helped build and scale user-facing features that streamlined tenant management, enabled secure online rent collection, facilitated tenant screening and background checks, and generated state-specific, legally compliant lease agreements.</p><p>The application was heavily data-driven, consisting of complex data management workflows, dynamic search results, detailed entity pages, and multi-step form wizards. I developed advanced interfaces to handle conditional UI flows based on user status and input. The site also included public-facing marketing and sales pages designed to communicate product value, drive conversions, and support customer acquisition.</p>',
+        '<p class="pb-4">For over 5 years I have served as the lead Frontend Developer for ezLandlordForms, a comprehensive property management platform designed to simplify the rental process for landlords and property managers. I helped build and scale user-facing features that streamlined tenant management, enabled secure online rent collection, facilitated tenant screening and background checks, and generated state-specific, legally compliant lease agreements.</p><p>The application was heavily data-driven, consisting of complex data management workflows, dynamic search results, detailed entity pages, and multi-step form wizards. I developed advanced interfaces to handle conditional UI flows based on user status and input. The site also includes public-facing marketing and sales pages designed to communicate product value, drive conversions, and support customer acquisition.</p>',
       techUsed: [
-        'Vue.js',
+        'Vue',
         'Nuxt',
         'Axios',
         'Swagger',
         'REST',
         'Tailwindcss',
+        'Claude-Code'
+      ],
+      siteLink: ''
+    },
+    EzAdmin: {
+      path: '/projects/ez-admin/',
+      thumbnailPath: '/ez_admin_thumb.png',
+      images: [
+        '/ez_admin_dashboard.png',
+        '/ez_admin_search.png',
+        '/ez_admin_search_details.png',
+        '/ez_admin_search_filters.png',
+        '/ez_admin_reports.png',
+        '/ez_admin_jira.png',
+        '/ez_admin_email_editor.png',
+        '/ez_admin_darkmode.png'
+      ],
+      title: 'ezLandlordForms Admin',
+      description:
+        '<p class="pb-4">This project stands out as one of the most rewarding experiences of my career. Our team had full ownership from the ground up. We defined the design system, selected the technology stack, implemented the architecture, and even crafted the technical copy throughout the interface. That level of autonomy allowed us to build a highly tailored, cohesive experience optimized for the needs of our internal users.</p><p class="pb-4">The platform featured a wide range of thoughtfully designed tools, including dark mode, detailed slide-out panels for inline workflows, dynamic timestamps, and robust content management capabilities. We implemented custom data caching and error handling strategies to ensure performance and reliability at scale. The admin site also served as a powerful integration hub, connecting directly with third-party services like Jira, TransUnion, Dwolla, and Plaid to streamline operations and centralize complex workflows into a single, efficient interface.</p><p>This was the first project where we integrated Claude Code into the system, enabling us to leverage its evolving capabilities to accelerate development, enhance automation, and continuously improve workflows as new features are released.</p>',
+      techUsed: [
+        'Vue',
+        'Nuxt',
+        'Cloudinary',
+        'Tailwindcss',
+        'PWA',
         'Claude-Code'
       ],
       siteLink: ''
@@ -35,7 +61,7 @@ export const state = () => ({
       description:
         '<p class="pb-4">I built this feature using an endpoint that returns a heavily nested pricing struct. I wrote a helper function that loops through multiple layers of properties while extracting prices for each cabin type, available promos, promo type, while ultimately tallying the values of each data point to run an across-the-board comparison.</p><p>Despite it\'s look, I was able to achieve this without using a table. I created a parent component that houses column components which converts to a tab view on smaller screens. This also allows cabin types to be hidden when they are not available. This project started out as a simple wireframe that I created in Adobe Illustrator, but iterated into a complex UI. With the interest of multiple stakeholders, the design pivoted a few times (even in the middle of development), but the end result has proven to be a key component to drive sales.</p>',
       techUsed: [
-        'Vue.js',
+        'Vue',
         'Nuxt',
         'Axios',
         'JavaScript',
@@ -58,7 +84,7 @@ export const state = () => ({
       description:
         '<p class="pb-4">Agent Power&trade;, Avoya\'s proprietary B2B software, is a lead management and booking software for our network of Travel Agents to manage their customers. The dashboard is a overview of their current activities, sales reports, and performance metrics. It is a snapshot of the most crucial data a travel agent needs to have at any given moment. Almost every component relies on dynamic data being securely returned for the most up to date information. Agency owners also have the option to change the view in order to see their employee\'s performance and status.</p>',
       techUsed: [
-        'Vue.js',
+        'Vue',
         'Nuxt',
         'Chart.js',
         'Axios',
@@ -75,7 +101,7 @@ export const state = () => ({
     //     images: ['/avoya_reviews_home.png', '/avoya_reviews_details.png'],
     //     title: 'Lead Claiming Tool',
     //     description: '<p class="pb-4">As part of our initiative to simplify the lead claiming process for our network of travel agents, we created a widget that will notify our agents </p>',
-    //     techUsed: ['Vue.js', 'Vuex', 'Axios', 'JavaScript', 'API', 'Tailwindcss', 'REST'],
+    //     techUsed: ['Vue', 'Vuex', 'Axios', 'JavaScript', 'API', 'Tailwindcss', 'REST'],
     //     siteLink: ''
     // },
     AvoyaReviews: {
@@ -85,7 +111,7 @@ export const state = () => ({
       title: 'Travel Review Page',
       description:
         '<p class="pb-4">This was a project I originally built in our legacy codebase using ColdFusion and JavaScript/Jquery. Our engineers compiled a table of customer reviews sent in through our membership system. My role was to design an interface where a user could sort though the reviews based on any combination of cruiselines and their corresponding ships.</p><p class="pb-4">A year later I had the opportunity to refactor these pages using Atomic Design in the Nuxt framework. We also upgraded the page with the ability to sort/filter by star rating, date, and ship name.</p>',
-      techUsed: ['Vue.js', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss'],
+      techUsed: ['Vue', 'Nuxt', 'Axios', 'JavaScript', 'API', 'Tailwindcss'],
       siteLink: ''
     },
     AvoyaMembership: {
@@ -99,7 +125,7 @@ export const state = () => ({
       title: 'Membership Landing Page',
       description:
         '<p class="pb-4">As my introductory project to Vue.js, this project was a terrific experience of how great a framework it is. The membership platform is actually a hybrid that uses ColdFusion to handle the api end points in the parent pages, then utilizes the "Props" to pass the data to the vue components</p><p class="pb-4">The membership platform is a system in which users can store their personal information, save their favorite trips, and write reviews<p>',
-      techUsed: ['Vue.js', 'JavaScript', 'jQuery', 'Ajax'],
+      techUsed: ['Vue', 'JavaScript', 'jQuery', 'Ajax'],
       siteLink: ''
     },
     MessagePlatform: {
@@ -110,7 +136,7 @@ export const state = () => ({
       description:
         '<p class="pb-4">Using a RESTful api that our backend team built, I was able to design and develop a messaging system for our network of travel agents and admins to securely communicate internally through our B2B software. I took this project from concept to creation. Thanks to the ability to write multi-layered actions in the Vuex Store, users have the ability to scan through a preview list of their messages, mark as read or unread, mark a task as complete, or drill into a single message view to get the full details. Users are able to toggle between mailboxes using Nuxt\'s dynamic routing and async fetch calls.</p>',
       techUsed: [
-        'Vue.js',
+        'Vue',
         'Nuxt',
         'Axios',
         'JavaScript',
