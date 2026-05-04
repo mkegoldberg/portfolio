@@ -53,7 +53,7 @@
                             class="mr-2"
                         />
                     </no-ssr>
-                    Back to Recent Projects
+                    Back to Projects
                 </nuxt-link>
 
                 <nuxt-link
@@ -99,7 +99,7 @@
             <span
                 v-for="tech in selectedProject.techUsed"
                 :key="tech"
-                class="bg-blue-lighter text-white text-center text-sm rounded-full p-2 w-24 mr-2 mb-2 md:mb-0"
+                class="bg-blue-lighter text-white text-center text-sm rounded-full p-2 w-24 mr-2 mb-2 md:mb-0 whitespace-no-wrap"
             >
                 {{ tech }}
             </span>
