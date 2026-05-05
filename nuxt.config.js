@@ -49,6 +49,8 @@ module.exports = {
 
   generate: {
     routes: [
+      '/projects/ez-landlord',
+      '/projects/ez-admin',
       '/projects/avoya-value-chart',
       '/projects/avoya-dashboard',
       '/projects/avoya-reviews',
